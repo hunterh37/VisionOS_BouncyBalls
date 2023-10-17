@@ -11,17 +11,22 @@ import _RealityKit_SwiftUI
 
 struct ImmersiveView: View {
     var viewModel: ViewModel
+    var sceneReconstructionManager = SceneReconstructionManager.shared
+    
     @ObservedObject var gestureModel: HandGestureModel
+    
     var body: some View {
         RealityView { content in
             content.add(rootEntity)
             content.add(leftHandEntity)
             content.add(rightHandEntity)
-        }
-        .gesture(dragGesture)
-        .gesture(rotateGesture)
+            
+            viewModel.spawnFloor()
+            viewModel.spawnBall()
+        }//.gesture(dragGesture).gesture(rotateGesture)
+        
         .task {
-            await SceneReconstructionManager.shared.generate()
+            await sceneReconstructionManager.generate()
         }.task {
             await gestureModel.start()
         }
@@ -30,10 +35,6 @@ struct ImmersiveView: View {
         }
         .task {
             await gestureModel.monitorSessionEvents()
-        }
-        .task {
-            viewModel.spawnFloor()
-            viewModel.spawnBall()
         }
     }
     

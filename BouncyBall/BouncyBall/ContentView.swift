@@ -59,7 +59,7 @@ struct ContentView: View {
                 Button(action: {
                     viewModel.spawnBall()
                 }, label: {
-                    Image(systemName: "plus.circle.fill")
+                   Text("+1 Ball")
                 })
             }.padding()
 

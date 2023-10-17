@@ -63,9 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				81308B692AD1D09700450E38 /* BouncyBallApp.swift */,
+				81308B792AD1D0FE00450E38 /* ViewModel.swift */,
 				81308B6B2AD1D09700450E38 /* ContentView.swift */,
 				81308B772AD1D0D700450E38 /* ImmersiveView.swift */,
-				81308B792AD1D0FE00450E38 /* ViewModel.swift */,
 				81308BB32AD39A8700450E38 /* HandGestureModel.swift */,
 				81308BB12AD372DC00450E38 /* SceneReconstructionManager.swift */,
 				81308B6D2AD1D09900450E38 /* Assets.xcassets */,
@@ -311,7 +311,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hunt3r.BouncyBall;
+				PRODUCT_BUNDLE_IDENTIFIER = hunt3r.BouncyBall2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;

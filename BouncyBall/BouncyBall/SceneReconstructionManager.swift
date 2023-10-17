@@ -14,6 +14,8 @@ class SceneReconstructionManager {
         return manager
     }()
     
+    
+    var meshEntity: Entity = Entity()
     var generated: Bool = false
     
     func generate() async {
@@ -48,6 +50,7 @@ class SceneReconstructionManager {
                         material: .default,
                         mode: .static)
                     rootEntity.addChild(entity)
+                    meshEntity = entity
                     generated = true
                     print("Successfully generated mesh for scene collision.")
                 }

@@ -12,8 +12,8 @@ import ARKit
 
 let rootEntity = Entity()
 var floorEntity = ModelEntity()
-var leftHandEntity = ModelEntity(mesh: .generateSphere(radius: 0.02), materials: [UnlitMaterial(color: .green)], collisionShape: .generateSphere(radius: 0.02), mass: 100)
-var rightHandEntity = ModelEntity(mesh: .generateSphere(radius: 0.02), materials: [UnlitMaterial(color: .green)], collisionShape: .generateSphere(radius: 0.02), mass: 100)
+var leftHandEntity = ModelEntity(mesh: .generateSphere(radius: 0.04), materials: [UnlitMaterial(color: .green)], collisionShape: .generateSphere(radius: 0.04), mass: 100)
+var rightHandEntity = ModelEntity(mesh: .generateSphere(radius: 0.04), materials: [UnlitMaterial(color: .green)], collisionShape: .generateSphere(radius: 0.04), mass: 100)
 
 @MainActor class ViewModel: ObservableObject {
     @Published var immersionStyle: ImmersionStyle = .mixed
@@ -103,23 +103,6 @@ extension Entity {
         let newScale = currentScale * 0.8
         
         if let animation = try? AnimationResource.generate(with: FromToByAnimation<Transform>(
-            from: transform,
-            to: Transform(scale: newScale, rotation: transform.rotation, translation: transform.translation),
-            duration: 1.0,
-            bindTarget: .transform
-        )) {
-            playAnimation(animation)
-        }
-    }
-    
-    func animateMaterial(to: UnlitMaterial) {
-        // Get the current transform scale
-        let currentScale = transform.scale
-        
-        // Calculate the new scale by increasing it by 10%
-        let newScale = currentScale * 0.8
-        
-        if let animation = try? AnimationResource.generate(with: FromToByAnimation<Material>(
             from: transform,
             to: Transform(scale: newScale, rotation: transform.rotation, translation: transform.translation),
             duration: 1.0,

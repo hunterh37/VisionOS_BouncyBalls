@@ -63,19 +63,12 @@ class HandGestureModel: ObservableObject, @unchecked Sendable {
                 
                 if anchor.chirality == .left {
                     latestHandTracking.left = anchor
-                    
-                    if let leftWrist = anchor.handSkeleton?.joint(.forearmWrist) {
-                        let leftWristPos = matrix_multiply(anchor.originFromAnchorTransform, leftWrist.anchorFromJointTransform).columns.3.xyz
-                        leftHandEntity.position = leftWristPos
-                    }
+                    leftHandEntity.position = anchor.originFromAnchorTransform.translation
                 } else if anchor.chirality == .right {
                     latestHandTracking.right = anchor
-                    
-                    if let rightWrist = anchor.handSkeleton?.joint(.forearmWrist) {
-                        let rightWristPos = matrix_multiply(anchor.originFromAnchorTransform, rightWrist.anchorFromJointTransform).columns.3.xyz
-                        rightHandEntity.position = rightWristPos
-                    }
+                    rightHandEntity.position = anchor.originFromAnchorTransform.translation
                 }
+                
             default:
                 break
             }
