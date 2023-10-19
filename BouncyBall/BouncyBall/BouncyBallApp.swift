@@ -17,7 +17,8 @@ struct BouncyBallApp: App {
         }.defaultSize(CGSize(width: 400, height: 600))
         
         ImmersiveSpace(id: "Space") {
-            ImmersiveView(viewModel: viewModel, gestureModel: HandGestureModelContainer.handGestureModel)
+            ImmersiveView(viewModel: viewModel,
+                          gestureModel: HandGestureModelContainer.handGestureModel)
         }.immersionStyle(selection: $viewModel.immersionStyle, in: .full, .mixed)
     }
 }
