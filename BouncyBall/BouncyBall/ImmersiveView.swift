@@ -23,7 +23,8 @@ struct ImmersiveView: View {
             
             viewModel.spawnFloor()
             viewModel.spawnBall()
-        }.gesture(dragGesture).gesture(rotateGesture)
+        }
+        .gesture(dragGesture).gesture(rotateGesture)
         
         .task {
             await sceneReconstructionManager.generate()

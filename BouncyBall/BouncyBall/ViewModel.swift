@@ -10,15 +10,20 @@ import SwiftUI
 import RealityKit
 import ARKit
 
+// Global Entities
 let rootEntity = Entity()
 var floorEntity = ModelEntity()
 var leftHandEntity = ModelEntity(mesh: .generateSphere(radius: 0.04), materials: [UnlitMaterial(color: .green)], collisionShape: .generateSphere(radius: 0.04), mass: 100)
 var rightHandEntity = ModelEntity(mesh: .generateSphere(radius: 0.04), materials: [UnlitMaterial(color: .green)], collisionShape: .generateSphere(radius: 0.04), mass: 100)
 
+
 @MainActor class ViewModel: ObservableObject {
     @Published var immersionStyle: ImmersionStyle = .mixed
     
     @Published var balls: [ModelEntity] = []
+}
+
+extension ViewModel {
     
     func spawnBall() {
         guard let resource = try? TextureResource.load(named: "BallTexture1") else { return }
@@ -73,7 +78,6 @@ var rightHandEntity = ModelEntity(mesh: .generateSphere(radius: 0.04), materials
         }
     }
 }
-
 
 
 extension Entity {

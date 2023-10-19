@@ -27,7 +27,7 @@
 		81308B792AD1D0FE00450E38 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		81308BB12AD372DC00450E38 /* SceneReconstructionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneReconstructionManager.swift; sourceTree = "<group>"; };
 		81308BB32AD39A8700450E38 /* HandGestureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandGestureModel.swift; sourceTree = "<group>"; };
-		81BDBD532AD94AA000ABB9F7 /* ImmersiveSpaceTemplate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ImmersiveSpaceTemplate-Info.plist"; sourceTree = "<group>"; };
+		81BDBD532AD94AA000ABB9F7 /* BouncyBall-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BouncyBall-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 		81308B592AD1D09700450E38 = {
 			isa = PBXGroup;
 			children = (
-				81BDBD532AD94AA000ABB9F7 /* ImmersiveSpaceTemplate-Info.plist */,
+				81BDBD532AD94AA000ABB9F7 /* BouncyBall-Info.plist */,
 				81308B642AD1D09700450E38 /* BouncyBall */,
 				81308B652AD1D09700450E38 /* Packages */,
 				81308B632AD1D09700450E38 /* Products */,

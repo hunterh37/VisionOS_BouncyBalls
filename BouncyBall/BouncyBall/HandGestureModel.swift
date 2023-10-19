@@ -1,6 +1,6 @@
 //
 //  HandGestureModel.swift
-//  ImmersiveSpaceTemplate
+//  BouncyBall
 //
 //  Created by Hunter Harris on 10/8/23.
 //
