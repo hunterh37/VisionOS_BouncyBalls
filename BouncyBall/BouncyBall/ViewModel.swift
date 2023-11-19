@@ -34,7 +34,7 @@ extension ViewModel {
         let ballEntity = ModelEntity(mesh: .generateSphere(radius: 0.3), materials: [material], collisionShape: .generateSphere(radius: 0.3), mass: 100)
         
         ballEntity.components[PhysicsBodyComponent.self] = .init(massProperties: .default, material: .default,  mode: .dynamic)
-        ballEntity.position = .init(x: 0, y: 5, z: 0)
+        ballEntity.position = .init(x: 0, y: 2, z: 0)
         ballEntity.components[InputTargetComponent.self] = InputTargetComponent(allowedInputTypes: .all)
         ballEntity.generateCollisionShapes(recursive: true)
         rootEntity.addChild(ballEntity)

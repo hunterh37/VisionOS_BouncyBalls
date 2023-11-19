@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811D537A2B0AD3B000F36DD3 /* MeshAnchorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811D53792B0AD3B000F36DD3 /* MeshAnchorTracker.swift */; };
 		81308B6A2AD1D09700450E38 /* BouncyBallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81308B692AD1D09700450E38 /* BouncyBallApp.swift */; };
 		81308B6C2AD1D09700450E38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81308B6B2AD1D09700450E38 /* ContentView.swift */; };
 		81308B6E2AD1D09900450E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81308B6D2AD1D09900450E38 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		811D53792B0AD3B000F36DD3 /* MeshAnchorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshAnchorTracker.swift; sourceTree = "<group>"; };
 		81308B622AD1D09700450E38 /* ImmersiveSpaceTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmersiveSpaceTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81308B692AD1D09700450E38 /* BouncyBallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncyBallApp.swift; sourceTree = "<group>"; };
 		81308B6B2AD1D09700450E38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				81308B772AD1D0D700450E38 /* ImmersiveView.swift */,
 				81308BB32AD39A8700450E38 /* HandGestureModel.swift */,
 				81308BB12AD372DC00450E38 /* SceneReconstructionManager.swift */,
+				811D53792B0AD3B000F36DD3 /* MeshAnchorTracker.swift */,
 				81308B6D2AD1D09900450E38 /* Assets.xcassets */,
 				81308B6F2AD1D09900450E38 /* Preview Content */,
 			);
@@ -167,6 +170,7 @@
 				81308BB22AD372DC00450E38 /* SceneReconstructionManager.swift in Sources */,
 				81308B7A2AD1D0FE00450E38 /* ViewModel.swift in Sources */,
 				81308B782AD1D0D700450E38 /* ImmersiveView.swift in Sources */,
+				811D537A2B0AD3B000F36DD3 /* MeshAnchorTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +307,7 @@
 				DEVELOPMENT_TEAM = 5BJZ4WHN8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ImmersiveSpaceTemplate-Info.plist";
+				INFOPLIST_FILE = "BouncyBall-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = BouncyBall;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -331,7 +335,7 @@
 				DEVELOPMENT_TEAM = NWR2UZ4V67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ImmersiveSpaceTemplate-Info.plist";
+				INFOPLIST_FILE = "BouncyBall-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = BouncyBall;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
