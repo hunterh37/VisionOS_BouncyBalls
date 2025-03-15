@@ -20,9 +20,12 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-            Text("Bouncy Ball").font(.extraLargeTitle)
+            Text("Bouncy Ball")
+                .font(.extraLargeTitle)
+                .padding(.bottom, 10)
             
-            Image("BouncyBall").padding()
+            Image("BouncyBall88")
+                .padding()
             
             HStack {
                 Button(action: {
@@ -39,7 +42,7 @@ struct ContentView: View {
                     }
                 }, label: {
                     Text(showImmersiveSpace ? "Exit" : "Enter")
-                })
+                }).tint(showImmersiveSpace ? .red : .green).padding()
             }.padding()
             
             HStack {

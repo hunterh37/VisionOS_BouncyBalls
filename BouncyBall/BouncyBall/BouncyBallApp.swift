@@ -16,6 +16,14 @@ struct BouncyBallApp: App {
             ContentView(viewModel: viewModel)
         }.defaultSize(CGSize(width: 400, height: 600))
         
+        WindowGroup {
+            ContentView(viewModel: viewModel)
+        }.defaultSize(CGSize(width: 400, height: 600))
+        
+        WindowGroup {
+            ContentView(viewModel: viewModel)
+        }.defaultSize(CGSize(width: 400, height: 600))
+        
         ImmersiveSpace(id: "Space") {
             ImmersiveView(viewModel: viewModel,
                           gestureModel: HandGestureModelContainer.handGestureModel)

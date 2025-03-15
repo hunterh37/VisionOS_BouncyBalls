@@ -22,7 +22,7 @@ class SceneReconstructionManager {
     }
     
     func loadWallMaterial() {
-        wallMaterial.color = .init(tint: .white.withAlphaComponent(0.2),
+        wallMaterial.color = .init(tint: .white.withAlphaComponent(1),
                                    texture: .init(try! .load(named: "BallTexture2")))
     }
     

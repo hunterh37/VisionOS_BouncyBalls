@@ -94,11 +94,15 @@ class HandGestureModel: ObservableObject, @unchecked Sendable {
 
 extension HandGestureModel {
     private func configureHandCollision() {
-        leftHandEntity.generateCollisionShapes(recursive: true)
+        var collision = CollisionComponent(shapes: [ShapeResource.generateSphere(radius: 0.304)])
+        collision.filter = CollisionFilter(group: handCollisionGroup, mask: [ ballCollisionGroup])
+        collision.mode = .default
+        
+        leftHandEntity.collision = collision
         leftHandEntity.components[PhysicsBodyComponent.self] = .init(
             massProperties: .default, material: nil,  mode: .kinematic)
         
-        rightHandEntity.generateCollisionShapes(recursive: true)
+        rightHandEntity.collision = collision
         rightHandEntity.components[PhysicsBodyComponent.self] = .init(
             massProperties: .default, material: nil,  mode: .kinematic)
     }

@@ -16,10 +16,13 @@ var floorEntity = ModelEntity()
 var leftHandEntity = ModelEntity(mesh: .generateSphere(radius: 0.04), materials: [UnlitMaterial(color: .green)], collisionShape: .generateSphere(radius: 0.04), mass: 100)
 var rightHandEntity = ModelEntity(mesh: .generateSphere(radius: 0.04), materials: [UnlitMaterial(color: .green)], collisionShape: .generateSphere(radius: 0.04), mass: 100)
 
+var floorCollisionGroup = CollisionGroup(rawValue: 16)
+var ballCollisionGroup = CollisionGroup(rawValue: 17)
+var handCollisionGroup = CollisionGroup(rawValue: 18)
 
-@MainActor class ViewModel: ObservableObject {
+@MainActor
+class ViewModel: ObservableObject {
     @Published var immersionStyle: ImmersionStyle = .mixed
-    
     @Published var balls: [ModelEntity] = []
 }
 
@@ -33,10 +36,11 @@ extension ViewModel {
         
         let ballEntity = ModelEntity(mesh: .generateSphere(radius: 0.3), materials: [material], collisionShape: .generateSphere(radius: 0.3), mass: 100)
         
-        ballEntity.components[PhysicsBodyComponent.self] = .init(massProperties: .default, material: .default,  mode: .dynamic)
+        ballEntity.components[PhysicsBodyComponent.self] = .init(massProperties: .default, material: .generate(staticFriction: 10, dynamicFriction: 10, restitution: 1),  mode: .dynamic)
         ballEntity.position = .init(x: 0, y: 2, z: 0)
         ballEntity.components[InputTargetComponent.self] = InputTargetComponent(allowedInputTypes: .all)
         ballEntity.generateCollisionShapes(recursive: true)
+    
         rootEntity.addChild(ballEntity)
         balls.append(ballEntity)
     }
@@ -45,6 +49,11 @@ extension ViewModel {
         let material = UnlitMaterial(color: .clear)
         floorEntity = ModelEntity(mesh: .generateBox(width: 30, height: 1, depth: 20), materials: [material], collisionShape: .generateBox(width: 30, height: 1, depth: 20), mass: 100000)
         floorEntity.components[PhysicsBodyComponent.self] = .init(massProperties: .init(mass: 100000), material: .default,  mode: .static)
+        
+        var collision = CollisionComponent(shapes: [ .generateBox(width: 30, height: 1, depth: 20)])
+        collision.mode = .default
+        collision.filter = CollisionFilter(group: floorCollisionGroup, mask: [ .default])
+        floorEntity.components[CollisionComponent.self] = collision
         
         floorEntity.position = .init(x: 0, y: -0.5, z: 0)
         rootEntity.addChild(floorEntity)

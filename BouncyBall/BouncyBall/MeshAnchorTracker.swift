@@ -84,6 +84,15 @@ class MeshAnchorTracker {
                 entity.components[ModelComponent.self] = ModelComponent(
                     mesh: meshResource,
                     materials: [SceneReconstructionManager.shared.wallMaterial])
+                
+                entity.components[SceneUnderstandingComponent.self] = .init(entityType: .meshChunk)
+                do {
+                    let anchorShape: ShapeResource = try await .generateStaticMesh(from: anchor)
+                    let collision = CollisionComponent(shapes: [anchorShape], mode: .default)
+                    entity.components[CollisionComponent.self] = collision
+                } catch {
+                    
+                }
             }
         } catch {
             print("MeshAnchorTracker: Error during generateMeshModel.")

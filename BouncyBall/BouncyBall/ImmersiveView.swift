@@ -27,7 +27,7 @@ struct ImmersiveView: View {
         .gesture(dragGesture).gesture(rotateGesture)
         
         .task {
-            await sceneReconstructionManager.generate()
+            sceneReconstructionManager.generate()
         }.task {
             await gestureModel.start()
         }

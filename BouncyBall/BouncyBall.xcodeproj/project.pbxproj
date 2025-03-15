@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		811D53792B0AD3B000F36DD3 /* MeshAnchorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshAnchorTracker.swift; sourceTree = "<group>"; };
-		81308B622AD1D09700450E38 /* ImmersiveSpaceTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmersiveSpaceTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81308B622AD1D09700450E38 /* BouncyBall-VisionPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BouncyBall-VisionPro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81308B692AD1D09700450E38 /* BouncyBallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncyBallApp.swift; sourceTree = "<group>"; };
 		81308B6B2AD1D09700450E38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81308B6D2AD1D09900450E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		81308B632AD1D09700450E38 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81308B622AD1D09700450E38 /* ImmersiveSpaceTemplate.app */,
+				81308B622AD1D09700450E38 /* BouncyBall-VisionPro.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81308B612AD1D09700450E38 /* ImmersiveSpaceTemplate */ = {
+		81308B612AD1D09700450E38 /* BouncyBall-VisionPro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81308B742AD1D09900450E38 /* Build configuration list for PBXNativeTarget "ImmersiveSpaceTemplate" */;
+			buildConfigurationList = 81308B742AD1D09900450E38 /* Build configuration list for PBXNativeTarget "BouncyBall-VisionPro" */;
 			buildPhases = (
 				81308B5E2AD1D09700450E38 /* Sources */,
 				81308B5F2AD1D09700450E38 /* Frameworks */,
@@ -107,11 +107,11 @@
 			);
 			dependencies = (
 			);
-			name = ImmersiveSpaceTemplate;
+			name = "BouncyBall-VisionPro";
 			packageProductDependencies = (
 			);
 			productName = Minigolf;
-			productReference = 81308B622AD1D09700450E38 /* ImmersiveSpaceTemplate.app */;
+			productReference = 81308B622AD1D09700450E38 /* BouncyBall-VisionPro.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -142,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81308B612AD1D09700450E38 /* ImmersiveSpaceTemplate */,
+				81308B612AD1D09700450E38 /* BouncyBall-VisionPro */,
 			);
 		};
 /* End PBXProject section */
@@ -302,9 +302,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"BouncyBall/Preview Content\"";
-				DEVELOPMENT_TEAM = 5BJZ4WHN8X;
+				DEVELOPMENT_TEAM = NWR2UZ4V67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "BouncyBall-Info.plist";
@@ -314,8 +314,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hunt3r.BouncyBall2;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.dicyaninlabs.bouncyball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -330,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"BouncyBall/Preview Content\"";
 				DEVELOPMENT_TEAM = NWR2UZ4V67;
 				ENABLE_PREVIEWS = YES;
@@ -342,8 +342,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hunt3r.BouncyBall;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.dicyaninlabs.bouncyball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -364,7 +364,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81308B742AD1D09900450E38 /* Build configuration list for PBXNativeTarget "ImmersiveSpaceTemplate" */ = {
+		81308B742AD1D09900450E38 /* Build configuration list for PBXNativeTarget "BouncyBall-VisionPro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81308B752AD1D09900450E38 /* Debug */,
